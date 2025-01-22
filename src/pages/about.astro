@@ -1,26 +1,43 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "About Me";
+const identity = {
+	firstName: "Nathan",
+	lastName: "Bleier",
+	country: "USA",
+	title: "Assistant Professor",
+	affiliation: "University of Michigan",
+};
+const research_interests = ["In-space computing", "Low-power computing", "Chiplet-based systems integration"];
 
+const happy = true;
+const finished = false;
+const goal = 3;
+const skillColor = "navy";
+const fontWeight = "bold";
+const textTransform = "capitalize";
 ---
+<BaseLayout pageTitle={pageTitle}>
+	<style define:vars={{skillColor, fontWeight, textTransform}}>
+		h1 {
+			color: purple;
+			font-size: 4rem;
+		}
+		.interest {
+			color: var(--skillColor);
+			font-weight: var(--fontWeight);
+			text-transform: var(--textTransform);
+		}
+	</style>
+	<h2>... and my new Astro Site!</h2>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
+	<p>I am working through blah blah </p>
 
-		<h1>About me</h1>
-		<h2>... and my new Astro Site!</h2>
+	<p>My research interests include</p>
+	<ul>
+		{research_interests.map((interest) => <li class="interest">{interest}</li>)}
+	</ul>
 
-		<p>I am working through blah blah </p>
-
-		<p>Second paragraph</p>
-	</body>
-</html>
-
+	{happy && <p>I am happy to be learning Astro!</p>}
+	{finished && <p>I finished this tutorial!</p>}
+</BaseLayout>

@@ -1,0 +1,33 @@
+---
+const { paper }  = Astro.props;
+import PaperIcon from './PaperIcon.astro';
+import PaperBibtex from './PaperBibtex.astro';
+import '../styles/global.css';
+---
+
+<style>
+    li {
+        padding: 3px 0; /* Adds spacing between each list item */
+        border-bottom: 1px solid #ddd; /* Light border for separation */
+        font-family: Arial, sans-serif; /* Sets a clean font */
+        font-size: 16px; /* Comfortable font size */
+    }
+    li:last-child {
+        border-bottom: none;
+    }
+    .small-svg {
+        width: 12px;
+        height: 12px;
+    }
+    .paper-link {
+        margin-right: 10px; /* Space between the link and the icon */
+    }
+    .paper-icon {
+        visibility: hidden;
+    }
+</style>
+<li>
+    <a href={`/papers/${paper.id}/`} class="paper-link">{paper.data.title}</a>
+    <PaperIcon paper={paper.data} class="paper-icon" />
+    <PaperBibtex paper={paper} className="paper-bibtex" />
+</li>

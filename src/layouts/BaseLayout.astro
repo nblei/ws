@@ -1,0 +1,33 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { library, icon } from "@fortawesome/fontawesome-svg-core";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faGamepad } from "@fortawesome/free-solid-svg-icons";
+import '../styles/global.css';
+
+library.add(faYoutube, faEnvelope, faGamepad);
+const gamepadIcon = icon({ prefix: "fas", iconName: faGamepad.iconName });
+const { pageTitle } = Astro.props;
+---
+
+
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{pageTitle}</title>
+    </head>
+    <body>
+        <Header />
+        <h1>{pageTitle}</h1>
+        <slot />
+        <Footer />
+        <script>
+            import "../scripts/menu.js"
+        </script>
+    </body>
+</html>
+

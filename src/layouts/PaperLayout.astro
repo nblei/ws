@@ -1,0 +1,28 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import AuthorList from '../components/AuthorList.astro';
+import PaperIcon from '../components/PaperIcon.astro';
+const { frontmatter } = Astro.props;
+---
+
+<head>
+    <meta charset="utf-8"/>
+</head>
+<style>
+    .h1 {
+        font-size: 1rem;
+    }
+</style>
+<BaseLayout pageTitle="">
+    <h3>{frontmatter.title}</h2>
+    Published in {frontmatter.conference} ({frontmatter.year})
+    <PaperIcon paper={frontmatter} />
+    
+    <h4>Abstract:</h4>
+    {frontmatter.abstract}
+
+
+    <h4>Authors:</h4>
+    <AuthorList authors={frontmatter.author} />
+    
+</BaseLayout>

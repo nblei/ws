@@ -1,0 +1,24 @@
+---
+import PaperLink from './PaperLink.astro';
+const { papers, year }  = Astro.props;
+const filteredPapers = papers.filter((paper: any) =>
+    paper.data.year == year
+);
+import '../styles/global.css';
+---
+
+<style>
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    h4 {
+        margin: 0;
+    }
+</style>
+
+<h4>{year}</h4>
+<ul>
+    {filteredPapers.map((paper: any) => <PaperLink paper={paper} />)}
+</ul>

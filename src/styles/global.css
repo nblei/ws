@@ -1,0 +1,163 @@
+html {
+    background-color: #f1f5f9;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 80ch;
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+}
+
+/* nav styles */
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: #ff9776;
+}
+
+.nav-links {
+  width: 100%;
+  top: 5rem;
+  left: 48px;
+  background-color: #ff9776;
+  display: none;
+  margin: 0;
+}
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover,
+.nav-links a:hover {
+  background-color: #ff9776;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.expanded {
+  display: unset;
+}
+
+@media screen and (min-width: 636px) {
+  .nav-links {
+    margin-left: 5em;
+    display: block;
+    position: static;
+    width: auto;
+    background: none;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
+/* Dark Mode Styles */
+html.dark .authors {
+  /* background-color: #1d1a47; /* Darker background for containers */
+  /* border-color: #fff; /* Match border color to the light text */
+}
+
+html.dark .author {
+  background-color: #ff9776; /* Change item background for contrast in dark mode */
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Responsive Adjustments if Needed */
+@media screen and (min-width: 636px) {
+  .grid-container {
+    padding: 40px;
+    grid-template-columns: repeat(3, 1fr); /* Adjust to a more fixed number of columns */
+  }
+}
+
+.author {
+  background-color: transparent;
+  color: purple;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border-radius: 0px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.author:hover {
+  background-color: #ff9776; /* Match hover background color of nav-links */
+  color: white; /* Ensure text contrast on hover */
+}
+
+/* Dark Mode Styles */
+html.dark .author {
+  background-color: transparent; /* Keep background consistent with nav-links */
+  color: #fff; /* Default color for text in dark mode */
+}
+
+html.dark .author:hover {
+  background-color: #ff9776; /* Maintain hover background in dark mode */
+  color: white; /* Ensure text is visible against hover background */
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: black;
+  transition: fill 0.3s ease;
+}
+
+.dark .icon {
+  fill: white;
+}
+
+.dark a {
+  color: #79AAFF;
+  text-decoration: none;
+}
+
+.dark a:hover {
+  color: #A0CFFF;
+}
+
+.dark a:visited {
+  color: #547DFF;
+}

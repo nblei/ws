@@ -1,0 +1,15 @@
+---
+import BlogTag from "./BlogTag.astro";
+const { tags } = Astro.props;
+---
+
+<style>
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>
+
+<div class="tags">
+    {tags.map((tag: any) => <BlogTag tag={tag}></BlogTag>)}
+</div>

@@ -1,20 +1,75 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Greeting from '../components/Greeting';
+const pageTitle = "Nathan Bleier";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
+<style>
+	#portrait {
+		width: 150px;
+		height: 150px;
+		object-fit: cover;
+		border-radius: 50%;
+		object-position: 35% 50%;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	}
 
-		<h1>My Astro Site</h1>
-	</body>
-</html>
+	.bio-section {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		column-gap: 20px;
+		align-items: start; /* Centers items vertically */
+	}
+
+	.bio-text {
+		max-width: 600px;
+	}
+
+	@media (max-width: 768px) {
+		.bio-section {
+			grid-template-columns: 1fr;
+			grid-row-gap: 20px;
+			text-align: center;
+		}
+		#portrait {
+			width: 100px;
+			height: 100px;
+		}
+	}
+</style>
+
+<BaseLayout pageTitle={pageTitle}>
+<div class="bio-section">
+	<img id="portrait" src="/portrait.jpg" alt="Portrait of Nathan Bleier">
+	<div class="bio-text">
+		<p>
+			Nathan joined the University of Michigan in 2024 as an
+			Assistant Professor in the
+			<a href="https://cse.engin.umich.edu">Computer Science & Engineering</a>
+			division of the
+			<a href="https://eecs.engin.umich.edu">
+				Electrical Engineering & Computer Science</a>
+			department.
+		</p>
+		<p>
+			Prior to joining Michigan, Nathan was a PhD student
+			from the University of Illinois at Urbana-Champaign,
+			advised by Rakesh Kumar, where his research focused
+			on extending the reach of computing to new applications
+			and domains with constraints that are not met by traditional
+			computing platforms through the development of novel chips,
+			architectures, and systems, including printed and flexible
+			microprocessors and accelerators, low-power computer architectures
+			targeting aural and olfactory sensing modalities,
+			and system architectures for energy efficient server-based
+			processing in Earth orbit.
+		</p>
+		<p>
+			Prior to his tertiary education, Nathan served
+			as an infantryman in the United States Army.
+			His decorations include the Combat Infantryman's Badge,
+			the Ranger Tab, and the Parachutist Badge.
+		</p>
+	</div>
+</div>
+</BaseLayout>

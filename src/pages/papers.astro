@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PaperByYear from "../components/PaperByYear.astro";
+import { getCollection } from "astro:content"
+const allPapers = await getCollection("papers");
+const sortedPapers = allPapers.sort((a, b) => {
+    return b.data.year - a.data.year
+});
+const newest: number = sortedPapers[0].data.year;
+const oldest: number = sortedPapers[sortedPapers.length-1].data.year;
+const numYears: number = newest-oldest + 1;
+const yearRange = Array.from({length: numYears}, (_, i) => i + oldest).reverse();
+const pageTitle = "Papers";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    {yearRange.map((year) => <PaperByYear papers={sortedPapers}, year={year} />)}
+</BaseLayout>

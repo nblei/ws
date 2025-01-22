@@ -1,25 +1,19 @@
 ---
-
+import BlogPost from "../components/BlogPost.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content"
+const allPosts = await getCollection("blog");
+const pageTitle = "Astro Blog";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
+<BaseLayout pageTitle={pageTitle}>
+	<p>I am working through blah blah </p>
 
-		<h1>Astro Blog</h1>
-
-		<p>I am working through blah blah </p>
-
-	</body>
-</html>
-
-
+	<ul>
+		{allPosts.map((post: any) =>
+		<BlogPost
+			url={`/posts/${post.id}/`} 
+			itle={post.data.title}>
+		</BlogPost>)}
+	</ul>
+</BaseLayout>

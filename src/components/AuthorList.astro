@@ -1,0 +1,24 @@
+---
+const { authors }  = Astro.props;
+const numAuthors = authors.length;
+const numColumns = 4
+const numRows = Math.ceil(numAuthors / numColumns)
+import '../styles/global.css';
+---
+
+<style define:vars={{ numAuthors }}>
+.authors {
+  display: grid;
+  grid-gap: 20px; /* Align the gap with padding for consistency */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* Adding shadow and border could visually align with other components */
+  padding: 20px;
+  border: 1px solid var(--primary-color); /* Use the primary color for borders */
+  margin-bottom: 2rem; /* Space out sections in non-media specific cases */
+  transition: background-color 0.3s ease; /* Smooth transition for color mode changes */
+}
+</style>
+
+<div class="authors">
+    {authors.map((author: any) => <div class="author">{author}</div>)}
+</div>

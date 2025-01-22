@@ -1,0 +1,14 @@
+---
+import PdfIcon from "./PdfIcon.astro";
+const { paper, class: className =- '', style = '' } = Astro.props;
+const pdfName = paper.title
+                    .trim()
+                    .toLowerCase()
+                    .replace(/\s+/g, '_')
+                    .replace(/\(/, '')
+                    .replace(/\)/, '')
+                    .replace(/:/g, '');
+
+---
+
+<PdfIcon pdfLink={`/papers/${pdfName}.pdf`} class={className} style={style}/>

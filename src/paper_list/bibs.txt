@@ -1,0 +1,73 @@
+Entry (line: 0, type: `article`, key: `Bleier_2024`):
+	`title` = `Programmable Olfactory Computing`
+	`volume` = `44`
+	`ISSN` = `1937-4143`
+	`url` = `http://dx.doi.org/10.1109/MM.2024.3409619`
+	`DOI` = `10.1109/mm.2024.3409619`
+	`number` = `4`
+	`journal` = `IEEE Micro`
+	`publisher` = `Institute of Electrical and Electronics Engineers (IEEE)`
+	`author` = `Bleier, Nathaniel and Wezelis, Abigail and Varshney, Lav and Kumar, Rakesh`
+	`year` = `2024`
+	`month` = `jul`
+	`pages` = `88–96`
+Entry (line: 2, type: `inproceedings`, key: `Bleier_2023`):
+	`doi` = `10.1145/3579371.3589061`
+	`url` = `https://doi.org/10.1145%2F3579371.3589061`
+	`year` = `2023`
+	`month` = `jun`
+	`publisher` = `{ACM}`
+	`author` = `Nathaniel Bleier and Abigail Wezelis and Lav Varshney and Rakesh Kumar`
+	`title` = `Programmable Olfactory Computing`
+	`booktitle` = `Proceedings of the 50th Annual International Symposium on Computer Architecture`
+Entry (line: 4, type: `article`, key: `Bleier2023`):
+	`title` = `Space Microdatacenters`
+	`journal` = `Proceedings of the 56th Annual IEEE/ACM International Symposium on Microarchitecture, MICRO 2023`
+	`year` = `2023`
+	`pages` = `900-915`
+	`author` = `Bleier, N. and Mubarik, M.H. and Swenson, G.R. and Kumar, R.`
+Entry (line: 6, type: `inproceedings`, key: `Bleier_2022`):
+	`doi` = `10.1145/3470496.3527410`
+	`url` = `https://doi.org/10.1145%2F3470496.3527410`
+	`year` = `2022`
+	`month` = `jun`
+	`publisher` = `{ACM}`
+	`author` = `Nathaniel Bleier and Calvin Lee and Francisco Rodriguez and Antony Sou and Scott White and Rakesh Kumar`
+	`title` = `FlexiCores: Low Footprint, High Yield, Field Reprogrammable Flexible Microprocessors`
+	`booktitle` = `Proceedings of the 49th Annual International Symposium on Computer Architecture`
+Entry (line: 8, type: `inproceedings`, key: `Bleier_2021`):
+	`doi` = `10.1109/dac18074.2021.9586090`
+	`url` = `https://doi.org/10.1109%2Fdac18074.2021.9586090`
+	`year` = `2021`
+	`month` = `dec`
+	`publisher` = `{IEEE}`
+	`author` = `Nathan Bleier and John Sartori and Rakesh Kumar`
+	`title` = `Property-driven Automatic Generation of Reduced-{ISA} Hardware`
+	`booktitle` = `2021 58th {ACM}/{IEEE} Design Automation Conference ({DAC})`
+Entry (line: 9, type: `inproceedings`, key: `Weller_2021`):
+	`doi` = `10.23919/date51398.2021.9474254`
+	`url` = `https://doi.org/10.23919%2Fdate51398.2021.9474254`
+	`year` = `2021`
+	`month` = `feb`
+	`publisher` = `{IEEE}`
+	`author` = `Dennis D. Weller and Nathaniel Bleier and Michael Hefenbrock and Jasmin Aghassi-Hagmann and Michael Beigl and Rakesh Kumar and Mehdi B. Tahoori`
+	`title` = `Printed Stochastic Computing Neural Networks`
+	`booktitle` = `2021 Design, Automation {\&}amp$\mathsemicolon$ Test in Europe Conference {\&}amp$\mathsemicolon$ Exhibition ({DATE})`
+Entry (line: 10, type: `inproceedings`, key: `Mubarik_2020`):
+	`doi` = `10.1109/micro50266.2020.00019`
+	`url` = `https://doi.org/10.1109%2Fmicro50266.2020.00019`
+	`year` = `2020`
+	`month` = `oct`
+	`publisher` = `{IEEE}`
+	`author` = `Muhammad Husnain Mubarik and Dennis D. Weller and Nathaniel Bleier and Matthew Tomei and Jasmin Aghassi-Hagmann and Mehdi B. Tahoori and Rakesh Kumar`
+	`title` = `Printed Machine Learning Classifiers`
+	`booktitle` = `2020 53rd Annual {IEEE}/{ACM} International Symposium on Microarchitecture ({MICRO})`
+Entry (line: 11, type: `inproceedings`, key: `Bleier_2020`):
+	`doi` = `10.1109/isca45697.2020.00028`
+	`url` = `https://doi.org/10.1109%2Fisca45697.2020.00028`
+	`year` = `2020`
+	`month` = `may`
+	`publisher` = `{IEEE}`
+	`author` = `Nathaniel Bleier and Muhammad Husnain Mubarik and Farhan Rasheed and Jasmin Aghassi-Hagmann and Mehdi B Tahoori and Rakesh Kumar`
+	`title` = `Printed Microprocessors`
+	`booktitle` = `2020 {ACM}/{IEEE} 47th Annual International Symposium on Computer Architecture ({ISCA})`
