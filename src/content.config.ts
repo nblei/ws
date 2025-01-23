@@ -19,11 +19,12 @@ const papers = defineCollection({
 })
 
 function paperToBibtex(paper) {
+    var authors = paper.data.author.join(' and ');
     return `@article{${paper.data.ID},
     title={${paper.data.title}},
     confierence={${paper.data.conference}},
     publisher={${paper.data.publisher}},
-    author={placeholder},
+    author={${authors}},
     year={${paper.data.year}},
     month={${paper.data.month}}
 }`
