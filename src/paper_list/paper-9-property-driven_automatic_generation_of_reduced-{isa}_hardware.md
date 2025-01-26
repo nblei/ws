@@ -8,6 +8,6 @@ year: 2021
 month: dec
 publisher: "IEEE"
 author: ['Nathan Bleier', 'John Sartori', 'Rakesh Kumar']
-title: "Property-driven Automatic Generation of Reduced-{ISA} Hardware"
+title: "Property-driven Automatic Generation of Reduced-ISA Hardware"
 conference: DAC
 ---

@@ -42,7 +42,7 @@ Entry (line: 8, type: `inproceedings`, key: `Bleier_2021`):
 	`month` = `dec`
 	`publisher` = `{IEEE}`
 	`author` = `Nathan Bleier and John Sartori and Rakesh Kumar`
-	`title` = `Property-driven Automatic Generation of Reduced-{ISA} Hardware`
+	`title` = `Property-driven Automatic Generation of Reduced-ISA Hardware`
 	`booktitle` = `2021 58th {ACM}/{IEEE} Design Automation Conference ({DAC})`
 Entry (line: 9, type: `inproceedings`, key: `Weller_2021`):
 	`doi` = `10.23919/date51398.2021.9474254`
